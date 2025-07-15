@@ -99,5 +99,45 @@
     <div class="product-price">50€</div>
     <a href="https://www.instagram.com/m/cam000uflage" class="buy-btn" target="_blank" rel="noopener noreferrer">BUY HERE</a>
   </div>
+
+<!-- Modal Form -->
+<div id="buyModal" style="display:none;position:fixed;z-index:1000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;">
+  <div style="background:#fff;padding:28px 18px 18px 18px;border-radius:10px;max-width:340px;width:90vw;box-shadow:0 2px 16px rgba(0,0,0,0.18);position:relative;">
+    <button onclick="closeModal()" style="position:absolute;top:8px;right:12px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:#888;">&times;</button>
+    <form id="buyForm" action="https://formsubmit.co/camouflageskateboards@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:12px;">
+      <div style="font-weight:bold;font-size:1.1rem;text-align:center;margin-bottom:8px;">Compila per acquistare</div>
+      <input type="text" name="nome" placeholder="Nome" required style="padding:7px 8px;border-radius:5px;border:1px solid #aaa;font-size:1rem;">
+      <input type="tel" name="numero" placeholder="Numero di telefono" required style="padding:7px 8px;border-radius:5px;border:1px solid #aaa;font-size:1rem;">
+      <input type="email" name="email" placeholder="Email" required style="padding:7px 8px;border-radius:5px;border:1px solid #aaa;font-size:1rem;">
+      <select name="prodotto" required style="padding:7px 8px;border-radius:5px;border:1px solid #aaa;font-size:1rem;">
+        <option value="">Seleziona prodotto</option>
+        <option>REAL TREE DECK</option>
+        <option>CROSS SHIRT BLK</option>
+        <option>CROSS SHIRT RED</option>
+        <option>CAMO DOG</option>
+      </select>
+      <input type="hidden" name="_subject" value="Nuovo ordine dal sito camouflage®!">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" style="margin-top:8px;background:#000;color:#fff;border:none;padding:10px 0;border-radius:5px;font-size:1.1rem;font-weight:bold;cursor:pointer;">Invia</button>
+    </form>
+    <div id="formSuccess" style="display:none;text-align:center;font-weight:bold;font-size:1.1rem;color:green;margin-top:10px;">Richiesta inviata! Ti ricontatteremo presto.</div>
+  </div>
+</div>
+<script>
+// Modal logic
+const modal = document.getElementById('buyModal');
+const buyBtn = document.querySelector('.buy-btn');
+buyBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  modal.style.display = 'flex';
+});
+function closeModal() {
+  modal.style.display = 'none';
+}
+// Close modal on outside click
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) closeModal();
+});
+</script>
 </body>
 </html> 
