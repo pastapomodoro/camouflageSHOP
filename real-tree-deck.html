@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>REAL TREE DECK | camouflage®</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Itc+Wagner:wght@700&display=swap');
+    @font-face {
+      font-family: 'NT Wagner';
+      src: url('ntwagner.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
     body {
       background: #ff0000;
       margin: 0;
@@ -13,25 +20,26 @@
       color: #000;
     }
     .container {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding-bottom: 32px;
+      padding-bottom: 48px;
     }
     .logo {
       text-align: center;
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin-top: 24px;
-      letter-spacing: 1px;
+      font-size: 3.2rem;
+      font-family: 'NT Wagner', Arial, sans-serif;
+      font-weight: normal;
+      margin-top: 32px;
+      letter-spacing: 1.5px;
       color: #000;
     }
     .logo sup {
-      font-size: 1rem;
+      font-size: 1.4rem;
       vertical-align: super;
     }
     .divider {
@@ -41,41 +49,41 @@
       width: 90%;
     }
     .product-img {
-      max-width: 220px;
-      width: 90vw;
+      max-width: 350px;
+      width: 95vw;
       height: auto;
-      margin-bottom: 24px;
-      margin-top: 16px;
-      border-radius: 10px;
+      margin-bottom: 32px;
+      margin-top: 24px;
+      border-radius: 14px;
       background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
       display: block;
     }
     .product-name {
-      font-size: 1.1rem;
+      font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 2px;
-      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: #000;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 18px;
       text-decoration: underline;
     }
     .product-price {
-      font-size: 1rem;
+      font-size: 1.5rem;
       text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       color: #000;
     }
     .buy-btn {
       display: block;
       margin: 0 auto;
-      margin-top: 32px;
+      margin-top: 40px;
       background: none;
       border: none;
       color: #fff;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
       font-weight: bold;
       text-decoration: underline;
       cursor: pointer;
@@ -87,6 +95,18 @@
       background: #fff;
       border-radius: 4px;
       text-decoration: none;
+    }
+    #buyModal > div {
+      max-width: 480px !important;
+      width: 98vw !important;
+      padding: 38px 24px 24px 24px !important;
+    }
+    #buyForm > * {
+      font-size: 1.25rem !important;
+    }
+    #buyForm button[type="submit"] {
+      font-size: 1.35rem !important;
+      padding: 18px 0 !important;
     }
   </style>
 </head>
